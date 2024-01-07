@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="assets/images/icon.ico">
+        <title>Color Picker</title>
+    </head>
+    <body>
+        <!-- Main container -->
+        <div id="main">
+            <!-- Color square display -->
+            <div id="color_square"> </div>
+            
+            <!-- Hue slider indicator -->
+            <p id="hue_indicator">Hue</p>
+            <input type="range" min="0" max="359" id="hue">
+            
+            <!-- Saturation slider indicator -->
+            <p id="saturation_indicator">Saturation</p>
+            <input type="range" min="0" max="100" id="saturation">
+            
+            <!-- Lightness slider indicator -->
+            <p id="lightness_indicator">Lightness</p>
+            <input type="range" min="0" max="100" id="lightness">
+            
+            <!-- Button to copy HSL value -->
+            <button id="HSL" onclick="copy()">hsl(365, 100, 100)</button>
+        </div>
+        <!-- Credits -->
+        <a href="https://github.com/bbatistadaniel" id="credits" target="_blank">
+            <div id="creditsdiv">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" id="github_icon">
+                <a href="https://github.com/bbatistadaniel" id="credits_a" target="_blank">github.com/bbatistadaniel</a>
+            </div>
+        </a>
+        <!-- Include JavaScript file -->
+        <script src="script.js"> </script>
+    </body>
+</html>

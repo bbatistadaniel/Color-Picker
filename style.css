@@ -1,0 +1,149 @@
+/* Root level custom variables */
+:root {
+    --main_width: 21vw;
+    --general_margin: 2vw;
+    --square_color: hsl(0,0%,100%);
+    --main_color: #F0F0F0 ;
+    --roundness: 3vw;
+    --buttons_text_color: #FFFFFF ;
+    --buttons_color: #4CAF50 ;
+    --buttons_color_hover: #5ed062  ;
+    --buttons_color_active: #317134  ;
+    --indicator_text_color: #333333;
+    --slider_background: #A9A9A9 ;
+    --slider_thumb_color: #707070  ;
+    --slider_thumb_color_hover: #555555  ;
+    --border: 0.15vw;
+    --border_color: #000;
+    --credits_div_color: #FFFFFF;
+}
+
+/* Global reset for margin, padding, and font */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI";
+    font-weight: bold;
+    font-size: 0.6vw;
+    user-select: none; /* Prevent text selection */
+}
+
+/* Body styling */
+body {
+    background-color: var(--square_color);
+}
+
+/* Main container styling */
+#main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: var(--main_width);
+    background-color: var(--main_color);
+    display: grid;
+    padding: var(--general_margin);
+    border-radius: var(--roundness);
+    border-width: var(--border);
+    border-color: var(--border_color);
+    border-style: solid;
+}
+
+/* Color square styling */
+#color_square {
+    --size: var(--main_width);
+    background-color: var(--square_color);
+    width: var(--size);
+    height: var(--size);
+    border-radius: var(--roundness);
+    margin-bottom: var(--general_margin);
+    border-width: var(--border);
+    border-color: var(--border_color);
+    border-style: solid;
+}
+
+/* Grid layout for various elements */
+#color_square {grid-area: 1 / 1 / 2 / 4;}
+#hue_indicator {grid-area: 2 / 1 / 3 / 2;}
+#saturation_indicator {grid-area: 3 / 1 / 4 / 2;}
+#lightness_indicator {grid-area: 4 / 1 / 5 / 2;}
+#hue {grid-area: 2 / 2 / 3 / 4;}
+#saturation {grid-area: 3 / 2 / 4 / 4;}
+#lightness {grid-area: 4 / 2 / 5 / 4;}
+#HSL {grid-area: 5 / 1 / 6 / 4;}
+
+/* Button styling */
+button {
+    margin-top: var(--general_margin);
+    width: 100%;
+    height: 3vw;
+    border-radius: var(--roundness);
+    border-width: 0;
+    background-color: var(--buttons_color);
+    color: var(--buttons_text_color);
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+button:hover {background-color: var(--buttons_color_hover);}
+button:active {background-color: var(--buttons_color_active);}
+
+/* Slider indicators styling */
+p {
+    font-size: 1vw;
+    text-align: center;
+    color: var(--indicator_text_color);
+}
+
+/* Slider styling */
+input {
+    width: 13vw;
+    justify-self: left;
+    align-self: center;
+    appearance: none;
+    outline: none;
+    height: 1vw;
+    background-color: var(--slider_background);
+    border-radius: var(--roundness);
+}
+input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 1vw;
+    width: 2vw;
+    border-radius: var(--roundness);
+    background-color: var(--slider_thumb_color);
+}
+input::-webkit-slider-thumb:hover {background-color: var(--slider_thumb_color_hover);}
+
+/*Credits styling*/
+#credits{cursor: default;}
+#creditsdiv{
+    display: grid;
+    width: 10vw;
+    height: 1.5vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2vw;
+    background-color: var(--credits_div_color);
+    border-radius: var(--roundness);
+    border-style: solid;
+    border-width: var(--border);
+    border-color: var(--border_color);
+    align-items: center;
+    justify-items: center;
+}
+#github_icon{
+    width: 1vw;
+    height: 1vw;
+    grid-area: 1 / 1 / 2 / 2;
+    float: right;
+    margin-left: 0.2vw;
+}
+#credits_a{
+    grid-area: 1 / 2 / 2 / 3;
+    text-decoration: none;
+    color: #000;
+    cursor: default;
+    margin-right: 0.2vw;
+    margin-bottom: 0.12vw;
+}
