@@ -48,3 +48,7 @@ Color Picker is a web application that allows users to pick and explore colors u
 ## License
 
 This project is open-source and is available under the [MIT License](LICENSE). Feel free to use and modify the code as needed.
+
+## Testing
+
+To experience this project, you can visit the following link: [Color Picker](https://bbatistadaniel.github.io/Color-Picker/)
